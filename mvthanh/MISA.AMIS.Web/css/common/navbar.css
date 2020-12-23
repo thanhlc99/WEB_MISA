@@ -5,14 +5,62 @@
     background-color: #ffffff;
     height: 100vh;
 }
-    .navbar .logo-site{
-        width:100%;
-        height:60px;
-        background-color:#000000;
-    }
-    .navbar .navbar-content{
-        width:100%;
-    }
-.logo-site .toggle-icon{
 
-}
+    .navbar .logo-site {
+        display:flex;
+        width: 100%;
+        height: 60px;
+        
+    }
+        /*logo page*/
+    .navbar .logo-box {
+        display: flex;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        width: 100%;
+    }
+    .navbar .logo-site .toggle-icon {
+        width: 24px;
+        height: 24px;
+        padding-left:10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/content/img/toggle.png');
+    }
+
+        .navbar .logo-site .amis-icon {
+            width: 100%;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('/content/img/cukcuk-logo.png');
+        }
+        /*end logo page*/
+        /*menu left*/
+        .navbar .navbar-content {
+            width: 100%;
+        }
+
+            .navbar .navbar-content .nav-item{
+                display:flex;
+                padding-left:24px;
+                height:44px;
+                cursor:pointer;
+                line-height:44px;
+            }
+            .navbar .navbar-content .nav-item:hover{
+                background-color:e5e5e5;
+                color:#000000;
+
+            }
+    .nav-item .nav-item-icon
+                   {
+        width:20px;
+        height:20px;
+        border:1px solid #ccc;
+        align-self:center;
+        margin-right:10px;
+
+    }
+        /*end menu left*/
