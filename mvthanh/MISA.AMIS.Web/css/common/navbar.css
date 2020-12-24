@@ -1,18 +1,26 @@
-﻿.navbar {
+﻿@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('/content/font/GoogleSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GoogleSans-Medium';
+    src: url('/content/font/GoogleSans-Medium.otf') format('opentype');
+}
+.navbar {
     float: left;
     width: 220px;
-    border-right: 1px solid #e5e5e5;
-    background-color: #ffffff;
+    background: #FFFFFF;
+    border-right: 1px solid #E5E5E5;
     height: 100vh;
+    width: 220px;
 }
-
+    /*logo page*/
     .navbar .logo-site {
-        display:flex;
+        display: flex;
         width: 100%;
         height: 60px;
-        
     }
-        /*logo page*/
+
     .navbar .logo-box {
         display: flex;
         position: absolute;
@@ -20,47 +28,73 @@
         left: 16px;
         width: 100%;
     }
+
     .navbar .logo-site .toggle-icon {
         width: 24px;
         height: 24px;
-        padding-left:10px;
+        padding-right: 10px;
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url('/content/img/toggle.png');
     }
 
-        .navbar .logo-site .amis-icon {
-            width: 100%;
-            height: 24px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-image: url('/content/img/cukcuk-logo.png');
-        }
-        /*end logo page*/
-        /*menu left*/
-        .navbar .navbar-content {
-            width: 100%;
-        }
-
-            .navbar .navbar-content .nav-item{
-                display:flex;
-                padding-left:24px;
-                height:44px;
-                cursor:pointer;
-                line-height:44px;
-            }
-            .navbar .navbar-content .nav-item:hover{
-                background-color:e5e5e5;
-                color:#000000;
-
-            }
-    .nav-item .nav-item-icon
-                   {
-        width:20px;
-        height:20px;
-        border:1px solid #ccc;
-        align-self:center;
-        margin-right:10px;
-
+    .navbar .logo-site .amis-icon {
+        width: 100%;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/content/img/cukcuk-logo.png');
     }
-        /*end menu left*/
+    /*end logo page*/
+
+    /*menu left*/
+    .navbar .navbar-content {
+        width: 100%;
+    }
+
+        .navbar .navbar-content .nav-item {
+            display: flex;
+            padding-left: 16px;
+            height: 44px;
+            cursor: pointer;
+            line-height: 44px;
+        }
+
+            .navbar .navbar-content .nav-item:hover {
+                background-color: #e5e5e5;
+                color: #000000;
+                font-family: GoogleSans-Medium;
+            }
+
+.nav-item .nav-item-icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.nav-icon-1 {
+    background-image: url('/content/icon/dashboard.png');
+}
+
+.nav-icon-2 {
+    background-image: url('/content/icon/report.png');
+}
+
+.nav-icon-3 {
+    background-image: url('/content/icon/dashboard.png');
+}
+
+.nav-icon-4 {
+    background-image: url('/content/icon/dic-employee.png');
+}
+
+.nav-icon-5 {
+    background-image: url('/content/icon/dic-employee.png');
+}
+
+.nav-icon-6 {
+    background-image: url('/content/icon/setting.png');
+}
+/*end menu left*/
