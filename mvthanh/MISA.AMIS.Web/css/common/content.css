@@ -4,5 +4,41 @@
     left: 221px;
     width: calc(100% - 221px);
     height: calc(100vh - 61px);
-    background: #FFFFFF;
+    background-color: #ffffff;
+
 }
+
+    /*page title*/
+    .content .page-title {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+        .content .page-title .title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .content .page-title .page-feature {
+            position: absolute;
+            right: 16px;
+        }
+
+.icon-add {
+    background-image: url('/content/icon/add.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+/*end page title*/
+
+
+/*page*/
+.content .paging-bar {
+    height:56px;
+    background-color:#ff0000;
+}
+/*end page*/

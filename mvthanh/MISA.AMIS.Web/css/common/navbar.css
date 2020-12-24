@@ -12,13 +12,13 @@
     background: #FFFFFF;
     border-right: 1px solid #E5E5E5;
     height: 100vh;
-    width: 220px;
+    
 }
     /*logo page*/
     .navbar .logo-site {
         display: flex;
         width: 100%;
-        height: 60px;
+        height: 61px;
     }
 
     .navbar .logo-box {
@@ -26,7 +26,7 @@
         position: absolute;
         top: 12px;
         left: 16px;
-        width: 100%;
+        width: 90%;
     }
 
     .navbar .logo-site .toggle-icon {
@@ -39,7 +39,7 @@
     }
 
     .navbar .logo-site .amis-icon {
-        width: 100%;
+        width: calc(100% - 50px);
         height: 24px;
         background-size: contain;
         background-repeat: no-repeat;
