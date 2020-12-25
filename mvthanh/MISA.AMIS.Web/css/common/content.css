@@ -36,7 +36,7 @@
 /*end page title*/
 
 
-/*bar page*/
+/*paging bar*/
 .content .paging-bar {
     height: 56px;
     display: flex;
@@ -95,4 +95,4 @@
     right: 16px;
     line-height: 56px;
 }
-/*end bar page*/
+/*end paging bar*/
