@@ -14,7 +14,7 @@
     height: 100vh;
     
 }
-    /*logo page*/
+    /*=====================logo page=====================*/
     .navbar .logo-site {
         display: flex;
         width: 100%;
@@ -45,9 +45,9 @@
         background-repeat: no-repeat;
         background-image: url('/content/img/cukcuk-logo.png');
     }
-    /*end logo page*/
+    /*===================end logo page===================*/
 
-    /*menu left*/
+    /*========================menu left=====================*/
     .navbar .navbar-content {
         width: 100%;
     }
@@ -97,4 +97,4 @@
 .nav-icon-6 {
     background-image: url('/content/icon/setting.png');
 }
-/*end menu left*/
+/*=====================end menu left====================*/

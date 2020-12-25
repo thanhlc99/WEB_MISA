@@ -15,21 +15,7 @@ table {
         border-bottom: 1px solid #bbbbbb;
         padding: 10px 16px;
         text-align: left;
-       
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
-
-#table-scroll{
-    margin-right:50px;
-}
-#table-scroll::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-    background-color: #e5e5e5;
-    border-radius: 2px;
-}
-
-|#table-scroll::-webkit-scrollbar-thumb {
-    background-color: #454545;
-    border-radius: 3px;
-}
-
