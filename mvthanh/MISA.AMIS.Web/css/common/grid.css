@@ -3,14 +3,17 @@
     height: 200px;
     position: relative;
 }
+
 table {
     width: 100%;
 }
-   table th {
-       position: sticky;
-       top: 0px;
-       background: #fff;
-   }
+
+    table th {
+        position: sticky;
+        top: 0px;
+        background: #fff;
+    }
+
     table th, td {
         border-bottom: 1px solid #bbbbbb;
         padding: 10px 16px;

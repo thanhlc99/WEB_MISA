@@ -48,17 +48,20 @@
     /*===================end logo page===================*/
 
     /*========================menu left=====================*/
-    .navbar .navbar-content {
-        width: 100%;
-    }
 
-        .navbar .navbar-content .nav-item {
-            display: flex;
-            padding-left: 16px;
-            height: 44px;
-            cursor: pointer;
-            line-height: 44px;
-        }
+.navbar .navbar-content {
+    width: 100%;
+}
+
+    .navbar .navbar-content .nav-item {
+        display: flex;
+        padding-left: 16px;
+        height: 44px;
+        cursor: pointer;
+        line-height: 44px;
+        text-decoration: none;
+        color:#000000;
+    }
 
             .navbar .navbar-content .nav-item:hover {
                 background-color: #e5e5e5;

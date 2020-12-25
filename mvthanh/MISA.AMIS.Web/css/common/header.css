@@ -9,7 +9,7 @@
     border-bottom: 1px solid #E5E5E5;
     display: flex;
 }
-/*left*/
+/*=========================left======================*/
 #left-header {
     margin-left: 16px;
     align-items: center;
@@ -25,8 +25,8 @@ select {
     font-weight: bold;
     cursor: pointer;
 }
-/*end left*/
-/*right*/
+/*=====================end left============================*/
+/*=======================right=============================*/
 #right-header {
     position: absolute;
     right: 16px;
@@ -58,4 +58,4 @@ select {
 .img_icon {
     align-self: center;
 }
-/*end right*/
+/*==============================end right=====================*/
