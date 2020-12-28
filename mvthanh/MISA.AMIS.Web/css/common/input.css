@@ -1,5 +1,5 @@
-﻿input {
-    padding: 10px 16px;
+input {
+    padding: 11px 16px;
     border-radius: 4px;
     outline: none;
     border: 1px solid #bbbbbb;
@@ -11,4 +11,11 @@
 }
 input::placeholder{
     font-size:12px;
+}
+.m-row input[type="date"] {
+    padding: 9px 16px !important;
+    color:#000000;
+}
+input:focus {
+    border-color: #019160;
 }

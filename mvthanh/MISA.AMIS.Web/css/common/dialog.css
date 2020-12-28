@@ -1,0 +1,123 @@
+.m-dialog {
+    display:none;
+}
+
+    .m-dialog .dialog-boxshow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        background-color: #000000;
+        opacity: .5;
+    }
+
+.m-content {
+    padding: 24px;
+}
+
+.m-dialog .m-dialog-content {
+    position: absolute;
+    width: 800px;
+    height: 690px;
+    z-index: 2;
+    border-radius: 4px;
+    top: calc(50% - 200px);
+    left: calc(50% - 400px);
+    background-color: #ffffff;
+}
+
+.dialog-header .dialog-header-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    font-family: GoogleSans-Regular;
+    margin-bottom: 24px;
+}
+
+.dialog-header .dialog-header-btn button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 4px;
+    background-image: url('/content/icon/x.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dialog-header .dialog-header-btn:hover button {
+    background-color: #E9EBEE;
+}
+
+.m-content_top {
+    display: flex;
+}
+
+.dialog-img {
+    width: 250px;
+    height: 250px;
+}
+
+    .dialog-img img {
+        width: 210px;
+        height: 200px;
+        border-radius: 125px;
+        border: 1px solid #E9EBEE;
+    }
+
+.m-row, .m-row1, .m-row2, .m-row3 {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+    .m-row .m-row2, p span {
+        color: #F65454;
+    }
+
+.m-content_center {
+    display: flex;
+}
+
+.m-row1 input {
+    width: 450px !important;
+}
+
+.m-row3 input {
+    width: 705px !important;
+}
+
+.m-dialog_footer {
+    display: flex;
+    height: 60px;
+    background-color: #E9EBEE;
+    width: 100%;
+}
+
+    .m-dialog_footer .footer_content {
+        position: absolute;
+        right: 8px;
+    }
+
+        .m-dialog_footer .footer_content button {
+            height: 36px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            margin-right: 16px;
+            width: 100px;
+        }
+
+.m-delete {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.m-add {
+    display: inline-flex!important;
+}

@@ -23,7 +23,11 @@ function formatDate(date) {
  * @param {any} value money số tiền
  */
 function formatMoney(value) {
-    value = Number(value)
-    var num = value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
-    return num;
+    if (value) {
+        value = Number(value)
+        var num = value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+        return num;
+    }
+    return "";
+
 }

@@ -118,21 +118,21 @@
         <!--table information-->
         <div class="grid grid-employee">
 
-            <div id="table-scroll">
+            <div class="table-scroll">
                 <table border="0" cellspacing="0">
                     <thead>
                         <tr>
-                            <th><span>Mã nhân viên</span></th>
-                            <th><span>Họ và tên</span></th>
-                            <th><span>Giới tính</span></th>
-                            <th><span>Ngày sinh</span></th>
-                            <th><span>Số điện thoại</span></th>
-                            <th><span>Email</span></th>
-                            <th><span>Chức vụ</span></th>
-                            <th><span>Phòng ban</span></th>
-                            <th><span>Mức lương hiện tại</span></th>
-                            <th><span>Địa chỉ</span></th>
-                            <th><span>Tình trạng công việc</span></th>
+                            <th fieldName="EmployeeCode"><span>Mã nhân viên</span></th>
+                            <th fieldName="FullName"><span>Họ và tên</span></th>
+                            <th fieldName="GenderName"><span>Giới tính</span></th>
+                            <th fieldName="DateOfBirth" formatType="d/m/y"><span>Ngày sinh</span></th>
+                            <th fieldName="Salary" formatType="Money"><span>Mức lương hiện tại</span></th>
+                            <th fieldName="PhoneNumber"><span>Số điện thoại</span></th>
+                            <th fieldName="Email"><span>Email</span></th>
+                            <th fieldName="PositionName"><span>Chức vụ</span></th>
+                            <th fieldName="DepartmentName"><span>Phòng ban</span></th>
+                            <th fieldName="Address"><span>Địa chỉ</span></th>
+                            <th fieldName="WorkStatusName"><span>Tình trạng công việc</span></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,6 +161,7 @@
     <!--end content-->
     <script src="/lib/jquery-3.5.1.min.js"></script>
     <script src="/js/common/common.js"></script>
+    <script src="/js/common/base.js"></script>
     <script src="/js/page/employee.js"></script>
 </body>
 </html>

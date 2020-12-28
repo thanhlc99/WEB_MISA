@@ -1,0 +1,71 @@
+﻿/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: GoogleSans-Regular;
+
+}
+
+    .custom-select select {
+        display: none; /*hide original SELECT element:*/
+        font-size: 13px;
+    }
+
+.select-selected {
+    background-color: #fff;
+    color: #000000;
+}
+
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        right: 12px;
+        top: 40px;
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid #000000;
+        transform: rotate(45deg);
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid #000000;
+        transform: rotate(-135deg);
+        top: 40px;
+    }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    color: #000000;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-color: #BBBBBB;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover {
+    background-color: #E9EBEE;
+}
+.same-as-selected {
+    background-color: #019160;
+    color: #fff!important;
+}
