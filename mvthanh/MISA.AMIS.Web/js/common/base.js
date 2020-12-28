@@ -38,7 +38,33 @@ class BaseJs {
         $('#btnClose').click(function () {
             $('#dialog').hide();
         })
-        
+
+        //validate du lieu dau vao input
+        $('input[required]').blur(function () {
+            var value = $(this).val();
+            if (!value) {
+                $(this).addClass('border-red');
+                $(this).attr('title', 'Truong nay khong duoc de trong');
+            }
+            else {
+                $(this).removeClass('border-red');
+                }
+        })
+
+        //validate du lieu dau vao input email
+        $('input[type="email"]').blur(function () {
+            var email = $(this).val();
+            var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!re.test(email)) {
+                $(this).addClass('border-red');
+                $(this).attr('title', 'Sai dinh dang email');
+            } else {
+                $(this).removeClass('border-red');
+            }
+        })
+
+
+
         //sự kiến ấn nút lưu
         $('#btnSave').click(function () {
             //validate dữ liệu

@@ -174,13 +174,15 @@
                 <div class="m-content_top">
                     <div class="dialog-img">
                         <img src="/content/img/default-avatar.jpg" id="output" alt="ảnh đại diện" />
-                        <div><label class="note_img" for="ufile">Vui lòng chọn ảnh có định dạng <br />.jpg .jpeg .png .gif</label></div>
+                        <div><label class="note_img" for="ufile">Vui lòng chọn ảnh có định dạng </label>
+                             <br />.jpg .jpeg .png .gif
+                        </div>
                         <input name="ImageFile" id="ufile" type="file" style="display:none; cursor:pointer;" onchange="loadFile(event)" />
                     </div>
                     <div class="conten_top_center">
                         <div class="m-row">
                             <p>Mã khách hàng(<span>*</span>)</p>
-                            <input type="text" />
+                            <input type="text" required/>
                         </div>
                         <div class="m-row">
                             <p>Mã thẻ nhân viên</p>
@@ -194,7 +196,7 @@
                     <div class="conten_top_center">
                         <div class="m-row">
                             <p>Họ và tên(<span>*</span>)</p>
-                            <input type="text" />
+                            <input type="text" required/>
                         </div>
                         <div class="m-row custom-select">
                             <p>Nhóm khách hàng</p>
@@ -223,11 +225,11 @@
                 <div class="m-content_center">
                     <div class="m-row1">
                         <p>Email</p>
-                        <input type="text" placeholder="example@domain.com" />
+                        <input type="email" placeholder="example@domain.com" />
                     </div>
                     <div class="m-row2">
                         <p>Số điện thoại(<span>*</span>)</p>
-                        <input type="text" />
+                        <input type="text" required/>
                     </div>
                 </div>
                 <div class="m-content_center">

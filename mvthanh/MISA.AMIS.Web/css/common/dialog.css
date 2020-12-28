@@ -23,7 +23,7 @@
     height: 690px;
     z-index: 2;
     border-radius: 4px;
-    top: calc(50% - 200px);
+    top: calc(50% - 340px);
     left: calc(50% - 400px);
     background-color: #ffffff;
 }

@@ -19,3 +19,6 @@ input::placeholder{
 input:focus {
     border-color: #019160;
 }
+input.border-red {
+    border-color: #FF4747;
+}
