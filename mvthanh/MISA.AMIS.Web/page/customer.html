@@ -174,29 +174,29 @@
                 <div class="m-content_top">
                     <div class="dialog-img">
                         <img src="/content/img/default-avatar.jpg" id="output" alt="ảnh đại diện" />
-                        <div><label class="note_img" for="ufile">Vui lòng chọn ảnh có định dạng </label>
-                             <br />.jpg .jpeg .png .gif
+                        <div style="text-align:center;"><label class="note_img" for="ufile">Vui lòng chọn ảnh có định dạng <br />.jpg .jpeg .png .gif</label>
+                             
                         </div>
                         <input name="ImageFile" id="ufile" type="file" style="display:none; cursor:pointer;" onchange="loadFile(event)" />
                     </div>
                     <div class="conten_top_center">
                         <div class="m-row">
                             <p>Mã khách hàng(<span>*</span>)</p>
-                            <input type="text" required/>
+                            <input type="text" id="txtCustomerCode" required/>
                         </div>
                         <div class="m-row">
                             <p>Mã thẻ nhân viên</p>
-                            <input type="text" />
+                            <input type="text" id="txtEmployeeCode"/>
                         </div>
                         <div class="m-row">
                             <p>Ngày sinh</p>
-                            <input type="date" />
+                            <input type="date" id="txtBirthDay"/>
                         </div>
                     </div>
                     <div class="conten_top_center">
                         <div class="m-row">
                             <p>Họ và tên(<span>*</span>)</p>
-                            <input type="text" required/>
+                            <input type="text" id="txtFullName" required/>
                         </div>
                         <div class="m-row custom-select">
                             <p>Nhóm khách hàng</p>
@@ -225,27 +225,27 @@
                 <div class="m-content_center">
                     <div class="m-row1">
                         <p>Email</p>
-                        <input type="email" placeholder="example@domain.com" />
+                        <input type="email" id="txtEmail" placeholder="example@domain.com" />
                     </div>
                     <div class="m-row2">
                         <p>Số điện thoại(<span>*</span>)</p>
-                        <input type="text" required/>
+                        <input type="text" id="txtPhoneNumber" required/>
                     </div>
                 </div>
                 <div class="m-content_center">
                     <div class="m-row1">
                         <p>Tên công ty</p>
-                        <input type="text" />
+                        <input type="text" id="txtCompany" />
                     </div>
                     <div class="m-row2">
                         <p>Mã số thuế</p>
-                        <input type="text" placeholder="Mã số thuế của công ty" />
+                        <input type="text" placeholder="Mã số thuế của công ty" id="txtTaxCode" />
                     </div>
                 </div>
                 <div class="m-content_bottom">
                     <div class="m-row3">
                         <p>Địa chỉ</p>
-                        <input type="text" />
+                        <input type="text" id="txtAddress" />
                     </div>
                 </div>
             </div>

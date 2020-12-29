@@ -66,9 +66,9 @@
 }
 
     .dialog-img img {
-        width: 210px;
+        width: 250px;
         height: 200px;
-        border-radius: 125px;
+        border-radius: 150px;
         border: 1px solid #E9EBEE;
     }
 
@@ -117,7 +117,13 @@
     border: none;
     cursor: pointer;
     outline: none;
+    transform: translateY(-2px);
+    background-color: #E9EBEE;
+    border-radius: 4px;
 }
-.m-add {
-    display: inline-flex!important;
-}
+    .m-delete:hover {
+        background-color: #bbbbbb;
+    }
+    .m-add {
+        display: inline-flex !important;
+    }
