@@ -24,15 +24,36 @@ class BaseJs {
     * Created by mvthanh (26/12/2020)
      **/
     initEvents() {
-        var me = this;
+        try {
+            var me = this;
+            //Sự kiện khi ấn nút thêm
+            $('#btnAdd').click(function () {
+                //hiển thị dialog thêm thông tin
+                $('#m-dialog').dialog('open');
+                //load dữ liệu select box
+             
+                var select = $('#CustomerGroupName');
+                select.empty();
+                $.ajax({
+                    url: me.hostNV + "/customergroups",
+                    method: "GET"
+                }).done(function (res) {
+                    if (res) {
+                        $.each(res, function (index, value) {
+                            var option = $(`<option value="${value.CustomerGroupId}">${value.CustomerGroupName}</option>`);
+                            select.append(option);
+                            console.log(select);
+                        })
+                    }
+                }).fail(function (res) {
 
-        //Sự kiện khi ấn nút thêm
-        $('#btnAdd').click(function () {
-            //hiển thị dialog thêm thông tin
-            $('#m-dialog').dialog('open');
-            //load dữ liệu select box
-
-        })
+                })
+            })
+        }
+        catch (e) {
+            console.log(e);
+        }
+      
         //sự kiện khi ấn nút load
         $('#btnRefresh').click(function () {
 
@@ -113,7 +134,7 @@ class BaseJs {
             return;
             //gọi service thực hiện lưu
             $.ajax({
-                url: this.hostNV + this.domainNV,
+                url: me.hostNV + me.domainNV,
                 method: "POST",
                 data: JSON.stringify(objCustomers),
                 contentType: "application/json"
