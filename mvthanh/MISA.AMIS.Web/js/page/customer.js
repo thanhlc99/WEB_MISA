@@ -1,6 +1,15 @@
 ﻿$(document).ready(function () {
     new Customer();
-    
+    dialogDefault = $('#m-dialog').dialog({
+        autoOpen: false,
+        fluid: true,
+        minWidth: 700,
+        resizable: true,
+        position: ({
+            my: "center", at: "center", of: window
+        }),
+        modal: true
+    });
 })
 
 /**

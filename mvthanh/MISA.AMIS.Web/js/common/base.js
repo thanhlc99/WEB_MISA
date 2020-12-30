@@ -21,7 +21,7 @@ class BaseJs {
         //Sự kiện khi ấn nút thêm
         $('#btnAdd').click(function () {
             //hiển thị dialog thêm thông tin
-            $('#dialog').show();
+            $('#m-dialog').dialog('open');
         })
         //sự kiện khi ấn nút load
         $('#btnRefresh').click(function () {

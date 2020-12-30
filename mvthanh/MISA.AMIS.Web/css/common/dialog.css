@@ -1,20 +1,9 @@
-.m-dialog {
-    display:none;
-}
 
-    .m-dialog .dialog-boxshow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 1;
-        background-color: #000000;
-        opacity: .5;
-    }
 
 .m-content {
-    padding: 24px;
+   padding-bottom:24px;
+   padding-left:24px;
+   padding-right:24px;
 }
 
 .m-dialog .m-dialog-content {
@@ -61,14 +50,14 @@
 }
 
 .dialog-img {
-    width: 250px;
+    width: 200px;
     height: 250px;
 }
 
     .dialog-img img {
-        width: 250px;
+        width: 200px;
         height: 200px;
-        border-radius: 150px;
+        border-radius: 100px;
         border: 1px solid #E9EBEE;
     }
 
@@ -86,11 +75,11 @@
 }
 
 .m-row1 input {
-    width: 450px !important;
+    width: 405px !important;
 }
 
 .m-row3 input {
-    width: 705px !important;
+    width: 660px !important;
 }
 
 .m-dialog_footer {
@@ -127,3 +116,51 @@
     .m-add {
         display: inline-flex !important;
     }
+
+/* css cho jquery dialog*/
+
+.ui-widget {
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+}
+
+.ui-widget-content {
+    background: #ffffff;
+    /*Change the dialog border color here*/
+    color: #000000;
+}
+
+.ui-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+#dialog1 p {
+    padding: 0;
+    margin: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 0 !important;
+}
+
+.ui-widget-header {
+    /*Change the Header color here*/
+    background: #fff;
+    border: 0;
+    color: #000000;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    margin: 24px;
+    font-weight: bold;
+    position: relative;
+    font-size: 15px;
+}
