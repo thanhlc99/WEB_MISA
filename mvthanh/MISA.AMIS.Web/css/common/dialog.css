@@ -1,6 +1,7 @@
 
 
 .m-content {
+   width:700px;
    padding-bottom:24px;
    padding-left:24px;
    padding-right:24px;
@@ -61,25 +62,27 @@
         border: 1px solid #E9EBEE;
     }
 
-.m-row, .m-row1, .m-row2, .m-row3 {
+.m-row, .m-row2 {
     margin-top: 16px;
     margin-left: 16px;
 }
-
-    .m-row .m-row2, p span {
-        color: #F65454;
-    }
+.m-row3, .m-row1 {
+    margin-top: 16px;
+}
+.m-row .m-row2, p span {
+    color: #F65454;
+}
 
 .m-content_center {
     display: flex;
 }
 
 .m-row1 input {
-    width: 405px !important;
+    width: 416px !important;
 }
 
 .m-row3 input {
-    width: 660px !important;
+    width: 666px !important;
 }
 
 .m-dialog_footer {
@@ -117,8 +120,7 @@
         display: inline-flex !important;
     }
 
-/* css cho jquery dialog*/
-
+/* ==================css cho jquery dialog================*/
 .ui-widget {
     font-family: GoogleSans-Regular;
     font-size: 13px;
@@ -163,4 +165,6 @@
     font-weight: bold;
     position: relative;
     font-size: 15px;
+    padding:0;
 }
+/* ================End css cho jquery dialog================*/

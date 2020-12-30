@@ -1,20 +1,28 @@
-
 /**
  * Hàm cha của employee và customer
  * created by mvthanh(26/12/2020)
  * */
 class BaseJs {
     constructor() {
+        this.hostNV = "http://api.manhnv.net/api";
+        this.domainNV = null;
         this.getDataUrl = null;
         this.setDataUrl();
         this.loadData();
         this.initEvents();
     }
 
-    setDataUrl() {
+    setDomainNV() {
 
     }
 
+    setDataUrl() {
+
+    }
+    /**======================================
+    * Hàm chứa các sự kiện trong form
+    * Created by mvthanh (26/12/2020)
+     **/
     initEvents() {
         var me = this;
 
@@ -22,24 +30,21 @@ class BaseJs {
         $('#btnAdd').click(function () {
             //hiển thị dialog thêm thông tin
             $('#m-dialog').dialog('open');
+            //load dữ liệu select box
+
         })
         //sự kiện khi ấn nút load
         $('#btnRefresh').click(function () {
-            
+
             $('table tbody tr').remove();
             me.loadData();
         })
 
         //Hiển thị thông tin chi tiết khi nhấn đúp chuột vô 1 bản ghi
         $('table tbody').on('dblclick', 'tr', function () {
-            $('#dialog').show();
+            $('#m-dialog').dialog('open');
         })
 
-
-        //sự kiện ấn nút x hoặc hủy
-        $('#btnCancel').click(function () {
-            $('#dialog').hide();
-        })
         $('#btnClose').click(function () {
             $('#dialog').hide();
         })
@@ -55,7 +60,7 @@ class BaseJs {
             else {
                 $(this).attr('validate', true);
                 $(this).removeClass('border-red');
-                }
+            }
         })
 
         //validate du lieu dau vao input email
@@ -89,27 +94,31 @@ class BaseJs {
                 return;
             }
 
-            //thu thập thông tin dữ liệu được nhập ->built thành obj
-            var objCustomer = {
-                "CustomerCode": $('#txtCustomerCode').val(),
-                "FullName": $('#txtFullName').val(),
-                "Address": $('#txtAddress').val(),
-                "DateOfBirth": $('#txtBirthDay').val(),
-                "Email": $('#txtEmail').val(),
-                "PhoneNumber": $('#txtPhoneNumber').val(),
-                "CustomerGroupId": "00000000-0000-0000-0000-000000000000",
-                "CompanyName": $('#txtCompany').val(),
-                "CompanyTaxCode": $('#txtTaxCode').val(),
-                "CustomerGroupName": "Nhóm khách hàng MISA",
-            }
+            //thu thập thông tin dữ liệu được nhập ->built thành objJson
+            var objCustomers = {};
+            var inputs = $('input[valueName],select[valueName]');//select tất cả các thẻ input
+            $.each(inputs, function (index, value) {
+                var propertieName = $(this).attr('valueName');
+                var valueCustomer = $(this).val();
+                if ($(this).attr('type')=="radio") {
+                    if (this.checked) {
+                        objCustomers[propertieName] = valueCustomer;
+                    }
+                }
+                else {
+                    objCustomers[propertieName] = valueCustomer;
+                }
+            })
+            console.table(objCustomers);
+            return;
             //gọi service thực hiện lưu
             $.ajax({
-                url: "http://api.manhnv.net/api/customers",
+                url: this.hostNV + this.domainNV,
                 method: "POST",
-                data: JSON.stringify(objCustomer),
+                data: JSON.stringify(objCustomers),
                 contentType: "application/json"
             }).done(function (res) {
-                alert("them thành công");
+                alert("Thêm thành công");
             }).fail(function (res) {
 
             })
@@ -133,15 +142,15 @@ class BaseJs {
             url: getDataUrl,
             method: "GET"
         }).done(function (res) {
-           
+
             $.each(res, function (index, obj) {
-               
+
                 var tr = $(`<tr></tr>`);
-                
+
                 $.each(columns, function (index, th) {
-                    
+
                     var td = $(`<td><div><span></span></div></td>`);
-                     var fielNames = $(th).attr('fieldName');//lấy cái để map dữ liệu vào
+                    var fielNames = $(th).attr('fieldName');//lấy cái để map dữ liệu vào
                     var value = obj[fielNames];//lấy thông tin dữ liệu map tương ứng
                     var formatType = $(th).attr('formatType');//lấy dữ liệu để map format date
                     switch (formatType) {
@@ -156,11 +165,11 @@ class BaseJs {
                     }
                     td.append(value);
                     tr.append(td);
-                    
+
                 })
-              
+
                 $('table tbody').append(tr);
-                
+
             })
         }).fail(function (res) {
 

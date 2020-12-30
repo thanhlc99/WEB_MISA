@@ -3,7 +3,8 @@
     dialogDefault = $('#m-dialog').dialog({
         autoOpen: false,
         fluid: true,
-        minWidth: 700,
+        minWidth: 750,
+        height: 695,
         resizable: true,
         position: ({
             my: "center", at: "center", of: window
@@ -18,7 +19,6 @@
  * */
 class Customer extends BaseJs {
     constructor() {
-
         super();
     }
 
@@ -26,4 +26,7 @@ class Customer extends BaseJs {
         this.getDataUrl = "http://api.manhnv.net/api/customers";
     }
 
+    setDomainNV() {
+        this.domainNV = "/customers";
+    }
 }

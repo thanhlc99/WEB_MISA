@@ -65,6 +65,12 @@
     border-radius: 50%;
     background: #019160;
 }
-.lb1{
+.rb1, .rb2{
     margin-right:10px;
 }
+    .rb1 input {
+        max-width:10px!important;
+    }
+    .rb2 input {
+        max-width: 10px !important;
+    }
