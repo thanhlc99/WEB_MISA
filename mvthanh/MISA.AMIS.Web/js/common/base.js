@@ -32,7 +32,7 @@ class BaseJs {
                 $('#m-dialog').dialog('open');
                 //load dữ liệu select box
              
-                var select = $('#CustomerGroupName');
+                var select = $('select#CustomerGroupName');
                 select.empty();
                 $.ajax({
                     url: me.hostNV + "/customergroups",
@@ -42,7 +42,6 @@ class BaseJs {
                         $.each(res, function (index, value) {
                             var option = $(`<option value="${value.CustomerGroupId}">${value.CustomerGroupName}</option>`);
                             select.append(option);
-                            console.log(select);
                         })
                     }
                 }).fail(function (res) {
