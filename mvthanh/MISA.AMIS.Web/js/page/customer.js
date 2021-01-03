@@ -4,7 +4,7 @@
         autoOpen: false,
         fluid: true,
         minWidth: 750,
-        height: 695,
+        height: 637,
         resizable: true,
         position: ({
             my: "center", at: "center", of: window

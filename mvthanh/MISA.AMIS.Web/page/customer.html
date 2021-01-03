@@ -68,7 +68,6 @@
         <!--end menu left-->
     </div>
     <!--=======End navbar=====-->
-
     <!--======header========-->
     <div class="header">
         <!--left header-->
@@ -90,7 +89,6 @@
         <!--end right header-->
     </div>
     <!--======End header=====-->
-
     <!--===============content===============-->
     <div class="content">
         <!--page title-->
@@ -106,7 +104,6 @@
             </div>
         </div>
         <!--end page title-->
-
         <!--filter bar-->
         <div class="filter-bar">
             <div class="filter-left">
@@ -119,7 +116,6 @@
             </div>
         </div>
         <!--end filter bar-->
-
         <!--******table information*****-->
         <div class="grid grid-employee">
 
@@ -134,8 +130,8 @@
                             <th fieldName=""><span>Nhóm khách hàng</span></th>
                             <th fieldName="PhoneNumber"><span>Điện thoại</span></th>
                             <th fieldName="Email"><span>Email</span></th>
-                            <th fieldName="Address"><span>Địa chỉ</span></th>
-                            <th fieldName="DebitAmount" formatType="Money"><span>Số tiền nợ</span></th>
+                            <th fieldName="Address" formatType="address"><span>Địa chỉ</span></th>
+                            <th fieldName="DebitAmount" formatType="money"><span>Số tiền nợ</span></th>
                             <th fieldName="MemberCardCode"><span>Mã thẻ thành viên</span></th>
                         </tr>
                     </thead>
@@ -145,7 +141,6 @@
             </div>
         </div>
         <!--******End table information****-->
-
         <!--===========paging bar===========-->
         <div class="paging-bar">
             <div class="text_left">Hiển thị 1-10/1000 khách hàng</div>
@@ -164,7 +159,6 @@
         <!--==========End paging bar============-->
     </div>
     <!--=================end content==========-->
-
     <!--=========dialog add information=========-->
     <div id="m-dialog" class="dialog1" title="THÔNG TIN KHÁCH HÀNG">
         <div class="m-dialog-content">
@@ -200,19 +194,18 @@
                         <div class="m-row custom-select">
                             <p>Nhóm khách hàng</p>
                             <select id="CustomerGroupName" valueName="CustomerGroupName" style="width:200px;">
-                               
                             </select>
                         </div>
                         <div class="m-row">
                             <p>Giới tính</p>
                             <label class="container rb1">
                                 Nam
-                                <input type="radio" checked="checked" value="1" valueName="Gender" name="radio">
+                                <input type="radio" checked="checked" value="1" title="nam" valueName="Gender" name="radio">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container rb2">
                                 Nữ
-                                <input type="radio" name="radio" value="0" valueName="Gender">
+                                <input type="radio" name="radio" value="0" title="nữ" valueName="Gender">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -247,7 +240,7 @@
             </div>
             <div class="m-dialog_footer">
                 <div class="footer_content">
-                    <button class="m-delete" id="btnCancel">Hủy</button>
+                    <button class="m-delete" id="btnClose">Hủy</button>
                     <button class="m-btn m-add" id="btnSave">
                         <div class="icon-add"></div>
                         <div class="btn-text">Lưu</div>
@@ -257,12 +250,32 @@
         </div>
     </div>
     <!--==========End dialog add information===========-->
-
-
+    <!--===========icon loading===========-->
+    <div id="load" class="load">
+        <div class="loading"></div>
+        <div class="load_icoin"></div>
+    </div>
+    <!--===========end icon loading===========-->
+    <!--===========notification===========-->
+    <div class="success">
+        <div class="title_notification">GỬI THÀNH CÔNG</div>
+    </div>
+    <div class="error">
+        <div class="title_notification">GỬI THẤT BẠI</div>
+    </div>
+    <div class="pop-up-notification">
+        <div class="cancel">X</div>
+        <div class="title_not">Pop-up thông báo</div>
+        <div class="content_not">Dữ liệu không hợp lệ. Vui lòng nhập lại!</div>
+        <div class="header_not">
+            <button class="m-btn m-cancel">Đóng</button>
+        </div>
+    </div>
+    <!--===========end notification===========-->
     <script src="/lib/jquery-3.5.1.min.js"></script>
     <script src="/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="/js/common/common.js"></script>
-  
+
     <script src="/js/common/base.js"></script>
     <script src="/js/page/customer.js"></script>
 </body>

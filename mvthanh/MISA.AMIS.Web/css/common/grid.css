@@ -22,3 +22,22 @@ table {
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+.table-scroll tbody tr:hover {
+    background-color: #BBBBBB !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.address{
+    max-width:250px;
+}
+
+.row-click {
+    background-color: #EBF9F4 !important;
+}

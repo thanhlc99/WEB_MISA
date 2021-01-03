@@ -31,3 +31,21 @@ function formatMoney(value) {
     return "";
 
 }
+/**------------------------------------------
+ * format dữ liệu ngày tháng năm sang năm/tháng/ngày
+ * Created by mvthanh(2020/12/25)
+ * @param {any} date tham số có kiểu dữ liệu bất kỳ
+ */
+function formatYYMMDD(date) {
+    var d = new Date(date),
+        day = '' + d.getDate(),
+        month = '' + (d.getMonth() + 1),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
